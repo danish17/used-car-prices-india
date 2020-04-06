@@ -1,0 +1,61 @@
+<!--Used Car Price Predictor (India) by Danish Shakeel @ github.com/danish17-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used Car Price Predictor</title>
+    <link rel = "stylesheet" href="../static/stylesheet.css">
+</head>
+<body>
+    <div id="header">
+    <h1>Used Car Price Predictor (India)</h1>
+    </div>
+
+    <h1 id="result">Predicted Price: {{ price }}</h1>
+
+    <form id="user_form" action=" {{ url_for('predict') }}" method="POST">
+        <label for="make">Make And Model</label>
+        <input type="text" id="make" name="make">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location">
+        <label for="year">Year</label>
+        <input type="text" id="year" name="year">
+        <label for="km">Kilometers Driven</label>
+        <input type="text" id="km" name="km">
+        <label for="fuel">Fuel Type</label>
+        <select id="fuel" value="fuel" name="fuel">
+            <option>Petrol</option>
+            <option>Diesel</option>
+            <option>CNG</option>
+        </select>
+        <label for="trans">Transmission Type</label>
+        <select id="trans" value="trans" name="trans">
+            <option>Manual</option>
+            <option>Automatic</option>
+        </select>
+        <label for="owner_type">Owner Type</label>
+        <select id="owner_type" value="owner_type" name="owner_type">
+            <option>First</option>
+            <option>Second</option>
+            <option>Third</option>
+            <option>Fourth</option>
+            <option>Fifth</option>
+            <option>Other</option>
+        </select>
+        <label for="mile">Mileage (kmpl)</label>
+        <input type="text" id="mile" name="mile">
+        <label for="engine">Engine (cc)</label>
+        <input type="text" id="engine" name="engine">
+        <label for="power">Power (bhp)</label>
+        <input type="text" id="power" name="power">
+        <label for="seats">Seats</label>
+        <input type="text" id="seats" name="seats">
+        <input type="submit" value="Predict">
+    </form>
+
+    
+
+    </form>
+</body>
+</html>
